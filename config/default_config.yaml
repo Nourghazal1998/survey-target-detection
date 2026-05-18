@@ -1,0 +1,46 @@
+# ----- Projection -----
+projection:
+  frame_spacing_m: 5.0
+  px_per_m: 230.0
+  min_lateral_m: 0.5
+  max_lateral_m: 12.0
+  height_up_m: 4.0
+  height_down_m: 1.5
+  brightness_boost: 1.25
+  enable_floor_clipping: true
+  hole_fill_mode: "auto"
+  generation_workers: 4
+
+# ----- Detection -----
+detection:
+  model_weights: "best.pt"
+  device: "cpu"
+  confidence_threshold: 0.35
+  slice_width: 640
+  slice_height: 640
+  slice_overlap_ratio: 0.1
+  bbox_min_width_px: 19
+  bbox_max_width_px: 65
+  bbox_min_height_px: 19
+  bbox_max_height_px: 65
+
+# ----- Template Matching -----
+template:
+  templates_dir: "templates/"
+  rotation_angles: [0, 10, 20, 30, 40, 50, 60, 70, 80, 90]
+  scale_range: [0.6, 1.6]
+  scale_steps: 9
+  match_threshold: 0.44
+  roi_upscale_factor: 2.5
+
+# ----- Deduplication -----
+deduplication:
+  max_dist_2d_px: 50.0
+  max_dist_3d_m: 0.20
+
+# ----- Paths -----
+input_dir: ""
+track_csv: ""
+output_dir: "output/"
+sides: ["left", "right"]
+queue_maxsize: 8
