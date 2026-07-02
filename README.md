@@ -4,7 +4,6 @@ An end-to-end pipeline for **automated detection and sub-millimeter localization
 
 The system converts 3D point clouds into 2D orthographic wall projections, detects survey targets using deep learning (YOLO + SAHI), refines detections via multi-scale template matching, and back-projects results to 3D world coordinates.
 
-> **Note**: This is a demonstration version showcasing the architecture and approach. Some implementation details are simplified.
 
 ---
 
@@ -97,7 +96,7 @@ survey-target-detection/
 
 ```bash
 # Clone
-git clone https://github.com/<your-username>/survey-target-detection.git
+git clone https://github.com/Nourghazal1998/survey-target-detection.git
 cd survey-target-detection
 
 # Create virtual environment
